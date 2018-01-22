@@ -5,11 +5,16 @@ function drag(id){
 	obj.onmousedown = function(ev){
 		disX  = ev.pageX - obj.offsetLeft;
 		disY  = ev.pageY - obj.offsetTop;
+		console.log(disX)
 		document.onmousemove = function(ev){
 			obj.style.left = ev.pageX - disX + 'px';
 			obj.style.top = ev.pageY - disY + 'px';
 
 		}
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+		}
 	}
-	
+	return false;
 }

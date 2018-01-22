@@ -4,11 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
-		div{width: :100px;}
+		#div1{width:100px;height: 100px;background-color: blue;position: absolute;/*left: 0px;top: 0px;*/}
 	</style>
 	<script src="drag.js"></script>
 </head>
 <body>
-	<div></div>
+	<div id ="div1"></div>
+	<script>
+		drag("div1")
+	</script>
 </body>
 </html>
